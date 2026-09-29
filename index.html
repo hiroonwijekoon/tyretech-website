@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Victory TyreTech | Tyre Retreading & Tyre Solutions</title>
+
+    <meta name="description"
+          content="Victory TyreTech - Professional tyre retreading, new tyres, tyre fitting and automotive solutions in Sri Lanka. Two retreading factories with one-day retreading service and delivery network.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0b0b;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            width: 100%;
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #ffd400;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            margin-left: 28px;
+            opacity: 0.85;
+        }
+
+        nav a:hover {
+            color: #ffd400;
+            opacity: 1;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 7% 90px;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 85% 50%,
+                    rgba(255, 212, 0, 0.15),
+                    transparent 35%
+                ),
+                #0b0b0b;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(255, 212, 0, 0.12);
+            border-radius: 50%;
+            right: -160px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border: 1px solid rgba(255, 212, 0, 0.08);
+            border-radius: 50%;
+            right: -80px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .hero-content {
+            max-width: 850px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .eyebrow {
+            color: #ffd400;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(48px, 7vw, 88px);
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            margin-bottom: 28px;
+        }
+
+        h1 span {
+            color: #ffd400;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #bdbdbd;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 26px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #ffd400;
+            color: #000000;
+        }
+
+        .btn-primary:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid #555;
+            color: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            border-color: #ffd400;
+            color: #ffd400;
+        }
+
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            background: #ffd400;
+            color: #000000;
+            padding: 28px 7%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 4px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            padding: 95px 7%;
+            background: #ffffff;
+            color: #111111;
+        }
+
+        .section-label {
+            color: #777777;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 44px;
+            line-height: 1.1;
+            margin-bottom: 45px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service {
+            padding: 35px;
+            background: #f4f4f4;
+            border-top: 4px solid #ffd400;
+            transition: 0.2s;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-number {
+            font-size: 13px;
+            color: #999999;
+            margin-bottom: 25px;
+        }
+
+        .service h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .service p {
+            color: #666666;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           RETREADING
+        ========================= */
+
+        .retreading {
+            padding: 100px 7%;
+            background: #111111;
+        }
+
+        .retreading-content {
+            max-width: 900px;
+        }
+
+        .retreading h2 {
+            font-size: 44px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .retreading h2 span {
+            color: #ffd400;
+        }
+
+        .retreading-intro {
+            color: #aaaaaa;
+            font-size: 17px;
+            margin-bottom: 45px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        .process {
+            padding: 22px 15px;
+            background: #1b1b1b;
+            border: 1px solid #292929;
+        }
+
+        .process-number {
+            color: #ffd400;
+            font-weight: bold;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .process h4 {
+            font-size: 15px;
+            margin-bottom: 7px;
+        }
+
+        .process p {
+            color: #888888;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           SUSTAINABILITY
+        ========================= */
+
+        .sustainability {
+            padding: 90px 7%;
+            background: #f5f5f5;
+            color: #111111;
+        }
+
+        .sustainability-content {
+            max-width: 900px;
+        }
+
+        .sustainability h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .sustainability h2 span {
+            color: #777777;
+        }
+
+        .sustainability p {
+            color: #555555;
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .benefit {
+            padding: 18px;
+            background: #ffffff;
+            border-left: 4px solid #ffd400;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           LOCATIONS
+        ========================= */
+
+        .locations {
+            padding: 95px 7%;
+            background: #ffffff;
+            color: #111111;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .location {
+            padding: 35px;
+            background: #f4f4f4;
+            border-bottom: 4px solid #ffd400;
+        }
+
+        .location h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .location p {
+            color: #666666;
+        }
+
+        .location strong {
+            color: #111111;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            padding: 95px 7%;
+            background: #111111;
+        }
+
+        .about-content {
+            max-width: 900px;
+        }
+
+        .about h2 {
+            font-size: 44px;
+            line-height: 1.1;
+            margin-bottom: 22px;
+        }
+
+        .about h2 span {
+            color: #ffd400;
+        }
+
+        .about p {
+            color: #aaaaaa;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            padding: 85px 7%;
+            background: #ffd400;
+            color: #000000;
+        }
+
+        .contact h2 {
+            font-size: 44px;
+            margin-bottom: 10px;
+        }
+
+        .contact > p {
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        .contact-details {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .contact-details div {
+            font-weight: bold;
+        }
+
+        .contact-details span {
+            font-size: 13px;
+            font-weight: normal;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .contact-details a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 25px 7%;
+            background: #080808;
+            color: #777777;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        footer strong {
+            color: #ffffff;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            nav {
+                padding: 20px 6%;
+            }
+
+            nav .links {
+                display: none;
+            }
+
+            .hero {
+                padding: 120px 6% 80px;
+            }
+
+            .hero::before,
+            .hero::after {
+                display: none;
+            }
+
+            h1 {
+                font-size: 52px;
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+                padding: 25px 6%;
+            }
+
+            .stat-number {
+                font-size: 25px;
+            }
+
+            .services,
+            .retreading,
+            .sustainability,
+            .locations,
+            .about,
+            .contact {
+                padding: 65px 6%;
+            }
+
+            .section-title,
+            .retreading h2,
+            .sustainability h2,
+            .about h2,
+            .contact h2 {
+                font-size: 34px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-details {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            footer {
+                padding: 22px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+
+        <div class="logo">
+            VICTORY <span>TYRETECH</span>
+        </div>
+
+        <div class="links">
+            <a href="#services">Services</a>
+            <a href="#retreading">Retreading</a>
+            <a href="#locations">Locations</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Victory TyreTech (Pvt) Ltd
+            </div>
+
+            <h1>
+                Best Quality.<br>
+                <span>Best Mileage.</span>
+            </h1>
+
+            <p>
+                Professional tyre retreading and tyre solutions
+                built around quality, durability and value.
+                With two retreading factories and a growing
+                delivery network, we keep you moving.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#contact" class="btn btn-primary">
+                    Contact Us
+                </a>
+
+                <a href="#retreading" class="btn btn-secondary">
+                    Our Retreading Service
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         KEY FACTS
+    ========================== -->
+
+    <section class="stats">
+
+          <div class="stat">
+            <div class="stat-number">30+</div>
+            <div class="stat-label">Years of Excellence</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number">MRF</div>
+            <div class="stat-label">Retreading Factories</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number">Premium</div>
+            <div class="stat-label">Service Outlets</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number">Island Wide🚚</div>
+            <div class="stat-label">Delivery Network</div>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section class="services" id="services">
+
+        <div class="section-label">
+            What We Do
+        </div>
+
+        <h2 class="section-title">
+            Tyre Solutions<br>
+            That Keep You Moving.
+        </h2>
+
+        <div class="service-grid">
+
+            <div class="service">
+
+                <div class="service-number">01</div>
+
+                <h3>Tyre Retreading</h3>
+
+                <p>
+                    Professional retreading solutions that extend
+                    tyre life while delivering reliable performance
+                    and value.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">02</div>
+
+                <h3>New Tyres & Tubes</h3>
+
+                <p>
+                    A range of brand-new tyres and tubes for
+                    different automotive and commercial applications.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">03</div>
+
+                <h3>Professional Tyre Fitting</h3>
+
+                <p>
+                    Professional tyre fitting services designed to
+                    get your vehicle safely back on the road.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RETREADING
+    ========================== -->
+
+    <section class="retreading" id="retreading">
+
+        <div class="retreading-content">
+
+            <div class="section-label">
+                Tyre Retreading
+            </div>
+
+            <h2>
+                Give Your Tyres<br>
+                <span>Another Life.</span>
+            </h2>
+
+            <p class="retreading-intro">
+                Tyre retreading replaces the worn tread of a
+                reusable tyre casing with a new tread. It provides
+                a practical way to extend tyre life, reduce waste
+                and achieve greater value from every casing.
+            </p>
+
+
+            <div class="process-grid">
+
+                <div class="process">
+                    <div class="process-number">01</div>
+                    <h4>Inspection</h4>
+                    <p>Reusable casings are carefully inspected.</p>
+                </div>
+
+                <div class="process">
+                    <div class="process-number">02</div>
+                    <h4>Buffing</h4>
+                    <p>Old worn tread is removed.</p>
+                </div>
+
+                <div class="process">
+                    <div class="process-number">03</div>
+                    <h4>New Tread</h4>
+                    <p>High-quality tread materials are applied.</p>
+                </div>
+
+                <div class="process">
+                    <div class="process-number">04</div>
+                    <h4>Curing</h4>
+                    <p>The new tread is bonded under controlled conditions.</p>
+                </div>
+
+                <div class="process">
+                    <div class="process-number">05</div>
+                    <h4>Final Check</h4>
+                    <p>Each retread undergoes quality inspection.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SUSTAINABILITY
+    ========================== -->
+
+    <section class="sustainability">
+
+        <div class="sustainability-content">
+
+            <div class="section-label">
+                Sustainability
+            </div>
+
+            <h2>
+                More Mileage.<br>
+                <span>Less Waste.</span>
+            </h2>
+
+            <p>
+                Retreading supports a more sustainable approach to
+                mobility by extending the useful life of tyre casings
+                and reducing the demand for new tyre manufacturing.
+            </p>
+
+            <div class="benefits">
+
+                <div class="benefit">
+                    ♻️ Reduces used tyre waste
+                </div>
+
+                <div class="benefit">
+                    🌱 Supports circular economy practices
+                </div>
+
+                <div class="benefit">
+                    💡 Makes greater use of existing tyre casings
+                </div>
+
+                <div class="benefit">
+                    🚚 A practical solution for fleet operators
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOCATIONS
+    ========================== -->
+
+    <section class="locations" id="locations">
+
+        <div class="section-label">
+            Find Us
+        </div>
+
+        <h2 class="section-title">
+            Our Locations
+        </h2>
+
+        <div class="location-grid">
+
+            <div class="location">
+
+                <h3>📍 Digana</h3>
+
+                <p>
+                    <strong>Tyre Solutions & Services</strong>
+                </p>
+
+                <p>
+                    Professional tyre fitting, new tyres and tubes,
+                    and on-site tyre retreading.
+                </p><br>
+
+                <p>
+                    <strong>One-day retreading service available.</strong>
+                </p><br>
+
+                <p>
+                    Open daily: 7:30 AM – 7:00 PM
+                </p>
+
+            </div>
+
+
+            <div class="location">
+
+                <h3>📍 Mahiyanganaya</h3>
+
+                  <p>
+                    <strong>Tyre Solutions & Services</strong>
+                </p>
+
+                <p>
+                    Professional tyre fitting, new tyres and tubes,
+                    and on-site tyre retreading.
+                </p><br>
+
+                <p>
+                    <strong>One-day retreading service available.</strong>
+                </p><br>
+
+                <p>
+                     Open Mon-Sat: 8:00 AM – 6:30 PM
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about">
+
+        <div class="about-content">
+
+            <div class="section-label">
+                About Victory TyreTech
+            </div>
+
+            <h2>
+                Built for the road.<br>
+                <span>Built to last.</span>
+            </h2>
+
+            <p>
+                Victory TyreTech is focused on delivering dependable
+                tyre solutions with a strong emphasis on quality,
+                durability and customer satisfaction.
+
+                Our operations include two tyre retreading factories,
+                strategically located branches and a delivery network
+                designed to make quality tyre solutions more accessible.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+        <h2>Let's Talk.</h2>
+
+        <p>
+            Contact Victory TyreTech for tyre retreading,
+            new tyres, fitting services and enquiries.
+        </p>
+
+
+        <div class="contact-details">
+
+            <div>
+                <span>EMAIL</span>
+
+                <a href="mailto:hello@victorytyretech.lk">
+                    hello@victorytyretech.lk
+                </a>
+            </div>
+
+
+            <div>
+                <span>DIGANA</span>
+
+                <a href="tel:+94777354709">
+                    077 735 4709
+                </a>
+            </div>
+
+
+            <div>
+                <span>WEBSITE</span>
+
+                victorytyretech.lk
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div>
+            © 2026 <strong>Victory TyreTech (Pvt) Ltd</strong>
+        </div>
+
+        <div>
+            Best Quality. Best Mileage.
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
